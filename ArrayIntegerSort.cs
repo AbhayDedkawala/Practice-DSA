@@ -1,4 +1,4 @@
-public class ArrayIntSort {
+public class ArrayIntegerSort {
     
     bool isAscending = false;
     int[] numbers = new int[] { 1, 5, 0, 3, 4, 2 };
