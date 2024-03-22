@@ -6,8 +6,7 @@ namespace DSA
     {
         public static void Main(string[] args)
         {
-            bool isRun = true;
-            while (isRun)
+            while (true)
             {
                 Console.Clear();
 
