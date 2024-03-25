@@ -1,16 +1,10 @@
 namespace DSA
 {
-    public class ArrayDSA : IDisposable
+    public sealed class ArrayDSA : IDisposable
     {
-        public ArrayDSA()
-        {
-            Console.Clear();
-        }
+        public ArrayDSA() => Console.Clear();
 
-        public void Dispose()
-        {
-            Console.Read();
-        }
+        public void Dispose() => Console.Read();
 
 
         /// <summary>
@@ -69,6 +63,22 @@ namespace DSA
 
             for (int i = 0; i < numbers.Length; i++)
                 Console.WriteLine(string.Format("{0} -> {1}", i, numbers[i]));
+        }
+
+        public void ArraySubArray()
+        {
+            int[] numbers = new int[] { 1, 5, 0, 2 };
+            int count = 0;
+            for (int i = 0; i < numbers.Length; i++)
+                for (int j = 0; j < i + 1; j++, count++)
+                {
+                    for (int k = j; k < i + 1; k++)
+                        Console.Write(numbers[k]);
+
+                    Console.Write("\n");
+                }
+
+            Console.WriteLine("Total : " + count);
         }
     }
 }
