@@ -17,6 +17,7 @@ namespace DSA
                 Console.WriteLine("1. Array Sort");
                 Console.WriteLine("2. Array Reverse");
                 Console.WriteLine("3. Sub Array");
+                Console.WriteLine("4. Reverse 2D Array");
                 Console.WriteLine("=====================================================================");
 
                 string? program = Console.ReadLine();
@@ -32,19 +33,25 @@ namespace DSA
             {
                 case "1":
                     using (ArrayDSA array = new ArrayDSA())
-                        array.ArrayIntegerSort();
+                        array.IntegerSort();
 
                     break;
 
                 case "2":
                     using (ArrayDSA array = new ArrayDSA())
-                        array.ArrayIntegerReverse();
+                        array.IntegerReverse();
 
                     break;
 
                 case "3":
                     using (ArrayDSA array = new ArrayDSA())
-                        array.ArraySubArray();
+                        array.SubArray();
+
+                    break;
+
+                case "4":
+                    using (ArrayDSA array = new ArrayDSA())
+                        array.Reverse2D();
 
                     break;
 

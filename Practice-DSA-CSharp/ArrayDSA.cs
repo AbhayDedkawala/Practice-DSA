@@ -12,7 +12,7 @@ namespace DSA
         /// Input Array : { 1, 5, 8, 2, 3 } <br/>
         /// Output Array : { 3, 2, 8, 5, 1 }
         /// </summary>
-        public void ArrayIntegerReverse()
+        public void IntegerReverse()
         {
             int[] numbers = new int[] { 1, 5, 0, 3, 4, 2 };
 
@@ -39,7 +39,7 @@ namespace DSA
         /// Input Array : { 1, 5, 8, 2, 3 } <br/>
         /// Output Array : { 1, 2, 3, 5, 8 }
         /// </summary>
-        public void ArrayIntegerSort()
+        public void IntegerSort()
         {
             bool isAscending = false;
             int[] numbers = new int[] { 1, 5, 0, 3, 4, 2 };
@@ -65,7 +65,7 @@ namespace DSA
                 Console.WriteLine(string.Format("{0} -> {1}", i, numbers[i]));
         }
 
-        public void ArraySubArray()
+        public void SubArray()
         {
             int[] numbers = new int[] { 1, 5, 0, 2 };
             int count = 0;
@@ -79,6 +79,29 @@ namespace DSA
                 }
 
             Console.WriteLine("Total : " + count);
+        }
+
+        public void Reverse2D()
+        {
+            int[,] numbers = new int[4, 4] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+
+            for (int i = 0; i < numbers.GetLength(0); i++)
+                for (int j = 0; j < numbers.GetLength(1) / 2; j++)
+                {
+                    numbers[i, j] = numbers[i, j] + numbers[i, numbers.GetLength(1) - j - 1];
+                    numbers[i, numbers.GetLength(1) - j - 1] = numbers[i, j] - numbers[i, numbers.GetLength(1) - j - 1];
+                    numbers[i, j] = numbers[i, j] - numbers[i, numbers.GetLength(1) - j - 1];
+                }
+
+            Console.WriteLine("\nAfter array reverse.");
+
+            for (int i = 0; i < numbers.GetLength(0); i++)
+            {
+                for (int j = 0; j < numbers.GetLength(1); j++)
+                    Console.Write(numbers[i, j] + "\t");
+
+                Console.Write("\n");
+            }
         }
     }
 }
