@@ -18,6 +18,7 @@ namespace DSA
                 Console.WriteLine("2. Array Reverse");
                 Console.WriteLine("3. Sub Array");
                 Console.WriteLine("4. Reverse 2D Array");
+                Console.WriteLine("5. Transpose 2D Array");
                 Console.WriteLine("6. Rotate 2D Array Clock wise 90 degree");
                 Console.WriteLine("7. Rotate 2D Array Clock wise 180 degree");
                 Console.WriteLine("=====================================================================");
@@ -54,6 +55,12 @@ namespace DSA
                 case "4":
                     using (ArrayDSA array = new ArrayDSA())
                         array.Reverse2D();
+
+                    break;
+
+                case "5":
+                    using (ArrayDSA array = new ArrayDSA())
+                        array.Transpose2D();
 
                     break;
 
