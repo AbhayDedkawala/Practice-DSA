@@ -21,6 +21,7 @@ namespace DSA
                 Console.WriteLine("5. Transpose 2D Array");
                 Console.WriteLine("6. Rotate 2D Array Clock wise 90 degree");
                 Console.WriteLine("7. Rotate 2D Array Clock wise 180 degree");
+                Console.WriteLine("8. Rotate 2D Array Clock wise 270 degree");
                 Console.WriteLine("=====================================================================");
 
                 string? program = Console.ReadLine();
@@ -73,6 +74,12 @@ namespace DSA
                 case "7":
                     using (ArrayDSA array = new ArrayDSA())
                         array.Rotate2DClockWise180();
+
+                    break;
+
+                case "8":
+                    using (ArrayDSA array = new ArrayDSA())
+                        array.Rotate2DClockWise270();
 
                     break;
 
