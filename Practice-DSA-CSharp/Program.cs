@@ -17,11 +17,12 @@ namespace DSA
                 Console.WriteLine("1. Array Sort");
                 Console.WriteLine("2. Array Reverse");
                 Console.WriteLine("3. Sub Array");
-                Console.WriteLine("4. Reverse 2D Array");
-                Console.WriteLine("5. Transpose 2D Array");
-                Console.WriteLine("6. Rotate 2D Array Clock wise 90 degree");
-                Console.WriteLine("7. Rotate 2D Array Clock wise 180 degree");
-                Console.WriteLine("8. Rotate 2D Array Clock wise 270 degree");
+                Console.WriteLine("4. Peak Array");
+                Console.WriteLine("5. Reverse 2D Array");
+                Console.WriteLine("6. Transpose 2D Array");
+                Console.WriteLine("7. Rotate 2D Array Clock wise 90 degree");
+                Console.WriteLine("8. Rotate 2D Array Clock wise 180 degree");
+                Console.WriteLine("9. Rotate 2D Array Clock wise 270 degree");
                 Console.WriteLine("=====================================================================");
 
                 string? program = Console.ReadLine();
@@ -55,29 +56,35 @@ namespace DSA
 
                 case "4":
                     using (ArrayDSA array = new ArrayDSA())
-                        array.Reverse2D();
+                        array.Peak();
 
                     break;
 
                 case "5":
                     using (ArrayDSA array = new ArrayDSA())
-                        array.Transpose2D();
+                        array.Reverse2D();
 
                     break;
 
                 case "6":
                     using (ArrayDSA array = new ArrayDSA())
-                        array.Rotate2DClockWise90();
+                        array.Transpose2D();
 
                     break;
 
                 case "7":
                     using (ArrayDSA array = new ArrayDSA())
-                        array.Rotate2DClockWise180();
+                        array.Rotate2DClockWise90();
 
                     break;
 
                 case "8":
+                    using (ArrayDSA array = new ArrayDSA())
+                        array.Rotate2DClockWise180();
+
+                    break;
+
+                case "9":
                     using (ArrayDSA array = new ArrayDSA())
                         array.Rotate2DClockWise270();
 
