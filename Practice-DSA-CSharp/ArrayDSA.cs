@@ -100,6 +100,22 @@ namespace DSA
             Console.WriteLine(string.Format("Peak Index : {0} \nPeak Element : {1}", peak, numbers[peak]));
         }
 
+        public void MinMaxSum()
+        {
+            int[] numbers = new int[] { 10, 5, -25, -7, 19, 2, -10, 23, 44 };
+            int min = numbers[0], max = numbers[0];
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] < min)
+                    min = numbers[i];
+                else if (numbers[i] > max)
+                    max = numbers[i];
+            }
+
+            Console.WriteLine("Sum of Min & Max Element is : " + ( min + max ));
+        }
+
         public void Reverse2D()
         {
             int[,] numbers = new int[4, 4] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
